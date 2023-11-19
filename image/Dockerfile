@@ -11,7 +11,7 @@ RUN apt-get -y install \
     curl bash sudo unzip
 
 RUN mkdir actions-runner && cd actions-runner \
-    && curl -o actions-runner-linux-x64-2.311.0.tar.gz -L "https://github.com/actions/runner/releases/download/v$RUNNER_VERSION/$RUNNER_FILE_NAME" \
+    && curl -o $RUNNER_FILE_NAME -L "https://github.com/actions/runner/releases/download/v$RUNNER_VERSION/$RUNNER_FILE_NAME" \
     && echo "$RUNNER_FILE_HASH $RUNNER_FILE_NAME" | sha256sum -c \
     && tar xzf "./$RUNNER_FILE_NAME"
 RUN ./actions-runner/bin/installdependencies.sh
