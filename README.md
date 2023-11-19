@@ -1,6 +1,8 @@
 # AWS CodeBuild Hosted GitHub Actions Runner
 AWS CodeBuildでGitHub Self Hosted RunnerのJust In Time Runnerを動かす為のコードです。
 
+<img src="README/system.png">
+
 - image  
   CodeBuildで動かす為のGitHub Self Hosted RunnerがセットアップされたDockerfileがあります。
 - lambda  
